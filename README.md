@@ -39,11 +39,11 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204492/IMG_0200
 
 + Algothim that creates user dictated "Gradient Matrix"
 
-⋅⋅⋅User inputs number of rows and columns, and creates this board.
+⋅⋅⋅ User inputs number of rows and columns, and creates this board.
 
 + Algothim that creates the Gradients for me
 
-⋅⋅⋅the user inputs 2 or 3 colors, the algothium creates the div's with that specific RGB/HEX codes.
+⋅⋅⋅ the user inputs 2 or 3 colors, the algothium creates the div's with that specific RGB/HEX codes.
 
 + Function that connects the Algothims 
 
