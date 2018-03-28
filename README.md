@@ -4,9 +4,9 @@
 
 |  Day | Deliverable | 
 |---|---| 
-|Day 1: Wed| +Wireframes
-+ Priority Matrix
-+Pseudocode/actual code| Yes
+|Day 1: Wed| *Wireframes
+*Priority Matrix
+*Pseudocode/actual code| Yes
 |Day 2: Thur| Wireframes and Priority Matrix| Yes
 |Day 3: Fri| Pseudocode\actual code| Yes
 |Day 4: Sat| Basic Clickable Model | Yes
