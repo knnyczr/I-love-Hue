@@ -12,13 +12,14 @@ body{
 	height: 100vh;
 	position: relative; 
 }
-#inner{
+#landing{
 	width: 30%; 
 	height: 40%; 
 	margin: 10% auto;
 /*	background: red; */
 	padding: 10px;
 	text-align: center; 
+/*	display: none; */
 }
 p{
 	font-family: 'Jura', sans-serif;
