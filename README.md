@@ -25,25 +25,27 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204492/IMG_0200
 
 ## MVP
 
-+"Gradient Matrix"
++ "Gradient Matrix"
 
-+Name input
++ Name input
 
-+Winning Logic
++ Winning Logic
 
-+Game initializer
++ Game initializer
 
-+Color scrambler
++ Color scrambler
 
 ## POST MVP
 
-+Algothim that creates user dictated "Gradient Matrix"
++ Algothim that creates user dictated "Gradient Matrix"
+
 ⋅⋅⋅User inputs number of rows and columns, and creates this board.
 
-+Algothim that creates the Gradients for me
++ Algothim that creates the Gradients for me
+
 ⋅⋅⋅the user inputs 2 or 3 colors, the algothium creates the div's with that specific RGB/HEX codes.
 
-+Function that connects the Algothims 
++ Function that connects the Algothims 
 
 ## Wireframes
 
@@ -53,27 +55,38 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204722/IMG_0197
 
 ### Landing Page
 
-+User will see "Hi" is large font, followed by an mini introduction. 
++ User will see "Hi" is large font, followed by an mini introduction. 
 +An input for the player's name.
 
 ### Game Initialization
 
-+After submiting the player's name
++ After submiting the player's name
 +A list of level's and boards. 
 +The first board is presented, the divs rearrange the game starts. 
 
 ### Playing The Game
 
-+During game play the player will be able to click and drag the div's to where they think the gradient is going, and on mouse up the div's switch.
++ During game play the player will be able to click and drag the div's to where they think the gradient is going, and on mouse up the div's switch.
 
-+MVP have it do both, click on click to swtich, & mousedown,  mouseover and up.
++ MVP have it do both, click on click to swtich, & mousedown,  mouseover and up.
 
 ### Winning The Game
 
-+After sucessfully rearranging the gradient the user will be congradulated and on to the next stage. 
++ After sucessfully rearranging the gradient the user will be congradulated and on to the next stage. 
 
 ### Game Reset
 
-+Every new level is a kind of reset.
-+Player will can jump to any level at the beginning
++ Every new level is a kind of reset.
++ Player will can jump to any level at the beginning
 
+## Functional Components
+
+
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Name input - HTML/CSS | L | 2hrs| 1hrs | hrs |
+| Gradient Matrix - HTML/CSS| M | 7hrs| 2hrs | hrs |
+| Winning Logic | H | 8hrs| 4hrs | hrs |
+| Game Initializer | M | 8hrs| 0hrs | hrs |
+| Color Scrambler | H | 8hrs| 0hrs | hrs |
+| postMVP | L | 8hrs| 0hrs | 0hrs |

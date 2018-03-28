@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Bigshot+One|Jura:400,500,700');
+
+*{
+	margin: 0px; 
+	padding: 0px; 
+}
+body{
+	background: #F7F5FB; 
+}
+#wrapper{
+	width: 100vw; 
+	height: 100vh;
+	position: relative; 
+}
+#inner{
+	width: 30%; 
+	height: 40%; 
+	margin: 10% auto;
+/*	background: red; */
+	padding: 10px;
+	text-align: center; 
+}
+p{
+	font-family: 'Jura', sans-serif;
+	font-weight: 400; 
+	text-align: left;
+	padding-left:20px; 
+	color: #000F08;
+}
+h2{
+	font-family: 'Bigshot One', cursive;
+	font-size: 200px;
+	color: #000F08; 
+}
+input{
+	font-family: 'Jura', sans-serif;
+	font-weight: 400;
+	font-size: 10px; 
+	height: 20px; 
+	text-align: center; 
+}
