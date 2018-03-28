@@ -10,28 +10,47 @@ body{
 #wrapper{
 	width: 100vw; 
 	height: 100vh;
-	position: relative; 
+/*	position: relative; */
+	overflow: hidden;
 }
 #landing{
 	width: 30%; 
 	height: 40%; 
-	margin: 10% auto;
+	margin: 15% auto;
 /*	background: red; */
 	padding: 10px;
 	text-align: center; 
-/*	display: none; */
+	display: none; 
 }
 p{
 	font-family: 'Jura', sans-serif;
 	font-weight: 400; 
 	text-align: left;
-	padding-left:20px; 
+	padding-left: 20px; 
 	color: #000F08;
+}
+h1{
+	font-family: 'Bigshot One', cursive;
+	font-size: 190px; 
+	color: #000F08;
+	position: absolute; 
+	margin: -5% 20px 0px; 
 }
 h2{
 	font-family: 'Bigshot One', cursive;
 	font-size: 200px;
 	color: #000F08; 
+}
+.textanimation{
+	background: 
+	radial-gradient(circle, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    radial-gradient(circle, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    radial-gradient(circle, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-size: 150% auto; 
+	animation: rainbow 3s linear infinite;
 }
 input{
 	font-family: 'Jura', sans-serif;
@@ -39,4 +58,18 @@ input{
 	font-size: 10px; 
 	height: 20px; 
 	text-align: center; 
+}
+
+#game{
+	width: 40%; 
+	height: 50%; 
+	margin: 15% auto;
+	background: red; 
+	border: solid black; 
+}
+
+@keyframes rainbow {
+    to {
+      background-position: 200% center;
+	}
 }

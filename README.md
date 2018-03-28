@@ -91,3 +91,9 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204722/IMG_0197
 | Color Scrambler | H | 8hrs| 0hrs | hrs |
 | postMVP | L | 8hrs| 0hrs | 0hrs |
 | TOTALS |  | 40hrs| 3hrs | 0hrs |
+
+
+## Resources
+
+TEXT COLOR ANIMATION
+https://codepen.io/shshaw/pen/YpERQQ
