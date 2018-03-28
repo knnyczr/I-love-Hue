@@ -5,80 +5,75 @@
 |  Day | Deliverable | 
 |---|---| 
 |Day 1: Wed| Wireframes, Priority Matrix, Pseudocode/actual code?| Yes
-|Day 2: Thur| Wireframes and Priority Matrix| Yes
-|Day 3: Fri| Pseudocode\actual code| Yes
-|Day 4: Sat| Basic Clickable Model | Yes
-|Day 5: Sun| Working Prototype | Yes
-|Day 6: Mon| Game Completed / Slides | Yes
-|Day 7: Tue| Project Presentations | Yes
+|Day 2: Thur| Gradient "maps," HTML/CSS(? if time allows this in Day 1)| Yes
+|Day 3: Fri| JS JS JS (& post MVP) | Yes
+|Day 4: Sat| Clean up the code, run final tests, begin presentation | Yes
+|Day 5: Sun| Sleep, practice presentation | Yes
+|Day 6: Mon| Game Completed | Yes
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+*I love hue* is the original single player game that makes puzzles out of gradients. This game is a clone of called *welp need a name*. At the beginning of the level, the player is presented with a board made up of tiles closely spaced together. Each tile has an individual color that together with it's siblings make gradient. The board then is re-arranged and player has to recreate that gradient. 
 
-https://docs.google.com/presentation/d/1QyVbekVsT6-d2_OX67u3OAb_x20VE297VXtMY3CYCCc/edit?usp=sharing
-
-https://codepen.io/camcash714/pen/mqojBa
-
-My project is a Roulette game. The player will input their name, select the number they can choose from the board and then click to throw the ball on the spinning wheel. If the number the player chooses matches the number the ball lands on the roulette spinner, they win, if numbers do not match, they lose. After either outcome the user can choose to click a button to play again.
+http://i-love-hue.com/
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matix.
 
-http://res.cloudinary.com/camcash17/image/upload/v1512677468/project1_matrix_ocy5gc.jpg  
+http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204492/IMG_0200.jpg
+
 
 ## MVP
 
-Include the full list of features that will be part of your MVP 
++"Gradient Matrix"
 
-- The player will start by typing out their name and clicking a submit button.
++Name input
 
-- They will then be able to select any number 1-36 on the roulette table.
++Winning Logic
 
-- Once they select their number, they can click another button to throw the ball on the spinning roulette wheel.
++Game initializer
 
-
-- The winning logic will only take into conisderation the one number the player chose that has a specific degree saved in its object and compare it to the degree of which the ball landed on the wheel.
++Color scrambler
 
 ## POST MVP
 
-Include the full list of features that you are considering for POST MVP
++Algothim that creates user dictated "Gradient Matrix"
+⋅⋅⋅User inputs number of rows and columns, and creates this board.
 
-POST MVP features are laid out to essentially make the game as realistic as possible:
++Algothim that creates the Gradients for me
+⋅⋅⋅the user inputs 2 or 3 colors, the algothium creates the div's with that specific RGB/HEX codes.
 
-- Add additional bets to choose from outside of just selecting one number 1-36
-    (even/odd, red/black, dozens and halves)
-
-- Add additional form to submit a $ bid amount The user could start out with a set amount of money and either win a certain payout if their bet hits, or lose the money wagered if it doesnt.
-
-- Add the option to place multiple bets other than just one option.
++Function that connects the Algothims 
 
 ## Wireframes
 
-Include images of your wireframes. 
-
-http://res.cloudinary.com/camcash17/image/upload/v1512677455/project1_wireframe_tpwhdy.jpg
+http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204722/IMG_0197.jpg
 
 ## Game Components
 
 ### Landing Page
-What will a player see when they start your game?
-The landing page will depict the header with the title, game directions, a form to submit your name a button to start the game and display the game boards.
+
++User will see "Hi" is large font, followed by an mini introduction. 
++An input for the player's name.
 
 ### Game Initialization
-What will a player see when the game is started? 
-The player will see a prompt to choose any number featured on the table, as well as a roulette wheel constantly spinning.
+
++After submiting the player's name
++A list of level's and boards. 
++The first board is presented, the divs rearrange the game starts. 
 
 ### Playing The Game
-What will be the flow of the game, what will the user be expeted to do and what will the user expect from the gam
-After the user has submitted their name and selected their number from the table, they will be prompted to click a button to throw the ball and Roulette!
+
++During game play the player will be able to click and drag the div's to where they think the gradient is going, and on mouse up the div's switch.
+
++MVP have it do both, click on click to swtich, & mousedown,  mouseover and up.
 
 ### Winning The Game
-What does it look like when the game ends, what determines winning or losing?
-Depending on where the ball lands, a prompt will appear either saying if the player wins or loses the game. If the position of the ball by degree matches the degree saved in the number object, the player wins and if not, they lose.
+
++After sucessfully rearranging the gradient the user will be congradulated and on to the next stage. 
 
 ### Game Reset
-How will the user restart the game once it has been completed.
-Once the ball stops and the prompt appears saying if they win or lose, a button will also appear to click and reset the game to the initialization settings.
+
++Every new level is a kind of reset.
++Player will can jump to any level at the beginning
 
