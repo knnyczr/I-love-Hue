@@ -84,7 +84,7 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204722/IMG_0197
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Name input - HTML/CSS | L | 1hrs| 1hrs | hrs |
+| Name input - HTML/CSS | L | 1hrs| 3hrs | hrs |
 | Gradient Matrix - HTML/CSS| M | 7hrs| 2hrs | hrs |
 | Winning Logic | H | 8hrs| 0hrs | hrs |
 | Game Initializer | M | 8hrs| 0hrs | hrs |
