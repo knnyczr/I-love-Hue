@@ -49,6 +49,9 @@ h2{
 	background-size: 200% auto; 
 	animation: rainbow 3s linear infinite;
 }
+.selected{
+	animation: selected 2s infinite; 
+}
 input{
 	font-family: 'Jura', sans-serif;
 	font-weight: 400;
@@ -83,6 +86,19 @@ input{
 	height: 100%; 
 	width: 100%; 
 	background: yellow; 
+}
+
+@keyframes selected {
+	0%{
+		transform: scale(1,1);
+	}
+	50%{
+		transform: scale(1.1, 1.1);
+		opacity: .5; 
+	}
+	100%{
+		transform: scale(1,1);
+	}
 }
 
 @keyframes rainbow {
