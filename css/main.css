@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bigshot+One|Jura:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Bigshot+One|Roboto:100');
 
 *{
 	margin: 0px; 
@@ -23,19 +23,21 @@ body{
 	display: none; 
 }
 p{
-	font-family: 'Jura', sans-serif;
-	font-weight: 400; 
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100; 
 	text-align: left;
 	padding-left: 20px; 
 	color: #000F08;
 }
 h1{
-	font-family: 'Jura', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
 	letter-spacing: -10px; 
 	font-size: 190px; 
 	color: #000F08;
 	position: absolute; 
 	margin: -5% 20px 0px; 
+	display:none;
 }
 h2{
 	font-family: 'Bigshot One', cursive;
@@ -61,8 +63,8 @@ input{
 }
 
 #selectionscreen{
-	width: 40%; 
-	height: 50%; 
+	width: 60%; 
+	height: 60%; 
 	margin: 15% auto;
 	background: green; 
 	border: solid black; 

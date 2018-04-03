@@ -1,4 +1,4 @@
-# Project 1 - I love hue clone
+# Project 1 - Hue Clone
 
 ## Project Schedule
 
@@ -13,7 +13,7 @@
 
 ## Project Description
 
-*I love hue* is the original single player game that makes puzzles out of gradients. This game is a clone of called *welp need a name*. At the beginning of the level, the player is presented with a board made up of tiles closely spaced together. Each tile has an individual color that together with it's siblings make gradient. The board then is re-arranged and player has to recreate that gradient. 
+*I love hue* is the original single player game that makes puzzles out of gradients. This game is a clone of called *HueClone*. At the beginning of the level, the player is presented with a board made up of tiles closely spaced together. Each tile has an individual color that together with it's siblings make gradient. The board then is re-arranged and player has to recreate that gradient. 
 
 http://i-love-hue.com/
 
@@ -82,13 +82,13 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204722/IMG_0197
 ## Functional Components
 
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Name input - HTML/CSS | L | 1hrs| 3hrs | hrs |
-| Gradient Matrix - HTML/CSS| M | 7hrs| 2hrs | hrs |
-| Winning Logic | H | 8hrs| 0hrs | hrs |
-| Game Initializer | M | 8hrs| 0hrs | hrs |
-| Color Scrambler | H | 8hrs| 0hrs | hrs |
+| Component | Priority | Estimated Time | Time Invetsted |
+| --- | :---: |  :---: | :---: |
+| Name input - HTML/CSS | L | 1hrs| 3hrs |
+| Gradient Matrix + HTML/CSS| M | 7hrs| 10hrs |
+| Winning Logic + Swap function | H | 8hrs| 20hrs |
+| Game Initializer | M | 8hrs| 2hrs |
+| Color Scrambler | H | 8hrs| 10hrs |
 | postMVP | L | 8hrs| 0hrs | 0hrs |
 | TOTALS |  | 40hrs| 3hrs | 0hrs |
 
@@ -97,3 +97,23 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204722/IMG_0197
 
 TEXT COLOR ANIMATION
 https://codepen.io/shshaw/pen/YpERQQ
+
+## Issues and Resolutions / One Up  Points (Learning Points)
+
+**Error:** app.js:56 Uncaught TypeError: sq1.addClass is not a function 
+**Resolution:** figured out the difference between node lists and arrays. Their uses. 
+
+**Learned**
+(Reference John Masters) What jQuery does is it wraps elements from the DOM, which is why it makes jQuery much easier to use making this :
+
+$('div')
+
+#### EASIER THAN 
+
+.getElementByTagName('div')
+
+On line JS:58 I compare $(this)[0] == sq[0] gives us the comparison of the inside of these wrappers. Comparing $(this) == sq will always return false because it comapres it's wrappers. 
+
+**Learned**
+$('.matrix') will always return a node list - jQuery find all things with that element name/class/id etc but doesnt return with an actual array, that must be stored into usable variable.
+#### NOTE: Can't iterate through a NodeList Or use any array method on a NodeList

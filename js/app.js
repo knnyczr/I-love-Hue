@@ -1,13 +1,14 @@
 //$(function(){
 
-//let $body = $('body');
 let $input = $('input');
 let $form = $('form');
 let $board = $('#board');
 let yourName = "";
 let $matrix;
-let sq1 = []; 
-let sq2 = []; 
+let sq1 = null; 
+let sq2 = null;
+let sq1Prev;
+let sq2Prev;
 let x = true; 
 let colors = ["rgb(218, 148, 255)", "rgb(174, 165, 255)", "rgb(118, 187, 255)", "rgb(57, 209, 255)"];
 
@@ -18,29 +19,23 @@ let colors = ["rgb(218, 148, 255)", "rgb(174, 165, 255)", "rgb(118, 187, 255)", 
 $form.submit(function(event){
 	event.preventDefault(); 
 	yourName = $input.val(); 
-	$('h1').push(yourName);
+	$('h1').text(yourName);
+	$('#landing').fadeOut('slow');
+	$('h1').fadeIn(3500); 
+	$('#selectionscreen').fadeIn(4000);
 });
-
-
 // gradient matrix
+// this creates a grid based on parameter n.
 function colorMatrix(){
 	for(let i = 0; i < 16; i++){
 		const row = Math.floor(i/colors.length);
 		$matrix = $("<div></div>");
 		$matrix.addClass('matrix ' + row );
-		$matrix.attr('id', i);
 		$matrix.click(swap);
 		$matrix.css('background', colors[Math.floor(i/colors.length)]);
 		$board.append($matrix);
 	}
 }
-
-
-// winning combination function
-// // array analysis from tic tac toe?
-
-
-
 // color scrambler 
 // // shuffler from the high low game?
 function colorScrambler(){
@@ -49,31 +44,46 @@ function colorScrambler(){
 	arr.appendTo($board);
 }
 
+// function allows to swap div's based on their position in the grid
+// if statement allows to select first div, 
+// else if allows you to unselect the initial div. 
+// else swaps the chosen div with a second div to take it's place. 
+// BUG :X the .prev and .insertAfter works for all div's in the board EXECPT
+// EXCEPT the very first div which has no previous div to latch onto. 
 function swap(){
 	if (x === true){
-		sq1.pop();
-		sq1.push($(this)); 
-		sq1.forEach(() => sq1[0].addClass('selected'));
-//		debugger;
+		sq1 = $(this);
+		sq1Prev = sq1.prev();
+		sq1.addClass('selected');
 		return x = false;
-	}else if (($(this) === sq1[0])&&(x === false)){
-		sq1.forEach(() => sq1[0].removeClass('selected'));
-		sq1.pop();
-//		debugger; 
+	}else if (($(this)[0] == sq1[0])&&(x === false)){
+		sq1.removeClass('selected');
 		return x = true;
 		}
 	else{
-		sq2.pop();
-		debugger; 
-		sq2.push($(this)); 
-		sq2.forEach(() => sq2[0].addClass('selected'));
+		sq2 = $(this); 
+		sq2Prev = sq2.prev();
+		sq1.insertAfter(sq2Prev);
+		sq2.insertAfter(sq1Prev);
+		sq1.removeClass('selected');
+		console.log(winner());
 		return x = true; 
 		}
 }
 
-
+// 
+function winner(){
+	let win = true; 
+	$matrix = $('.matrix');
+	$matrix.each(function(i){
+		if (!$(this).hasClass(`${Math.floor(i / colors.length)}`)){
+			win = false;
+		}})
+	return win;
+}
 
 colorMatrix(); 
 colorScrambler(); 
+//winner();
 //});
 
