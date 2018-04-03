@@ -98,13 +98,16 @@ http://res.cloudinary.com/knnyczr/image/upload/a_auto_right/v1522204722/IMG_0197
 TEXT COLOR ANIMATION
 https://codepen.io/shshaw/pen/YpERQQ
 
+TIMER FUNCTION
+@Aisha Barrous
+
 ## Issues and Resolutions / One Up  Points (Learning Points)
 
 **Error:** app.js:56 Uncaught TypeError: sq1.addClass is not a function 
 **Resolution:** figured out the difference between node lists and arrays. Their uses. 
 
 **Learned**
-(Reference John Masters) What jQuery does is it wraps elements from the DOM, which is why it makes jQuery much easier to use making this :
+(Reference John Masters) jQuery wraps elements from the DOM. Making it easier to select elements from the HTML.
 
 $('div')
 

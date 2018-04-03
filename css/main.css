@@ -20,7 +20,7 @@ body{
 /*	background: red; */
 	padding: 10px;
 	text-align: center; 
-	display: none; 
+/*	display: none; */
 }
 p{
 	font-family: 'Roboto', sans-serif;
@@ -40,9 +40,20 @@ h1{
 	display:none;
 }
 h2{
-	font-family: 'Bigshot One', cursive;
+	font-family: 'Bigshot One', san-serif;
 	font-size: 200px;
 	color: #000F08; 
+}
+h3{
+	display: none; 
+	font-family: 'Roboto', sans-serif;
+	position: absolute;
+	font-size: 100px; 
+	margin: 5% auto; 
+}
+h4{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px; 
 }
 .textanimation{
 	background: linear-gradient(90deg, rgba(252,176,69,0.6) 0%, rgba(58,98,180,1) 32%, rgba(211,29,253,1) 72%, rgba(252,176,69,0.6) 100%);
@@ -63,19 +74,26 @@ input{
 }
 
 #selectionscreen{
-	width: 60%; 
+	width: 80%; 
 	height: 60%; 
 	margin: 15% auto;
-	background: green; 
-	border: solid black; 
+/*	background: green; */
+/*	border: solid black; */
 	display: none; 
 }
-
+.selections{
+	width: 200px; 
+	height: 200px;
+	border: solid black;
+	display: inline-block;
+/*	margin: 0 auto; */
+	display: none; 
+}
 #game{
 	width: 30%; 
 	height: 60%; 
 	margin: 10% auto;
-/*	display: none;*/
+	display: none;
 }
 #board{
 	width:100%; 
@@ -83,11 +101,15 @@ input{
 	display: grid; 
 	grid-template-columns: repeat(4, 1fr);
 }
-
+#timer{
+	position: absolute; 
+	right: 30px; 
+	top: 5%; 
+}
 .matrix{
 	height: 100%; 
 	width: 100%; 
-	background: yellow; 
+	border: 1px solid rgba(147, 147, 147, .8);
 }
 
 @keyframes selected {
