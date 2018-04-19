@@ -5,31 +5,33 @@ const $form = $('form');
 let $board = $('#board');
 let yourName = "";
 let $matrix;
-let b; 
+let c;
 let sq1 = null; 
 let sq2 = null;
 let sq1Prev;
 let sq2Prev;
 let x = true; 
 let count = 10;
-let colors = ["rgb(218, 148, 255)", "rgb(174, 165, 255)", "rgb(118, 187, 255)", "rgb(57, 209, 255)"];
 
-//const colors = {
-//b1 : ["rgb(218, 148, 255)", "rgb(174, 165, 255)", 
-//	"rgb(118, 187, 255)", "rgb(57, 209, 255)"],
-//
-//b2 :  ["rgb(255, 142, 255)", "rgb(255, 173, 255)", 
-//	"rgb(255, 196, 255)", "rgb(255, 220, 255)"],
-//
-//b3 : ["rgb(135, 233, 105)", "rgb(167, 203, 94)", 
-//	"rgb(198, 185, 83)", "rgb(236, 157, 70)"],
-//
-//b4 : ["rgb(14, 194, 237)", "rgb(11, 176, 242)", 
-//	"rgb(8, 155, 247)", "rgb(1, 135, 252)"],
-//
-//b5 : ["rgb(135, 233, 105)", "rgb(167, 203, 94)", 
-//	"rgb(198, 185, 83)", "rgb(236, 157, 70)", "rgb(236, 1157, 70)"]
-//};
+//let colors = ["rgb(218, 148, 255)", "rgb(174, 165, 255)", "rgb(118, 187, 255)", "rgb(57, 209, 255)"];
+
+const colors = {
+b1 : ["rgb(218, 148, 255)", "rgb(174, 165, 255)", 
+	"rgb(118, 187, 255)", "rgb(57, 209, 255)"],
+
+b2 :  ["rgb(255, 142, 255)", "rgb(255, 173, 255)", 
+	"rgb(255, 196, 255)", "rgb(255, 220, 255)"],
+
+b3 : ["rgb(135, 233, 105)", "rgb(167, 203, 94)", 
+	"rgb(198, 185, 83)", "rgb(236, 157, 70)"],
+
+b4 : ["rgb(14, 194, 237)", "rgb(11, 176, 242)", 
+	"rgb(8, 155, 247)", "rgb(1, 135, 252)"],
+
+b5 : ["rgb(135, 233, 105)", "rgb(167, 203, 94)", 
+	"rgb(198, 185, 83)", "rgb(236, 157, 70)", "rgb(236, 1157, 70)"]
+};
+let keys = Object.keys(colors);
 
 // name input
 // on click of submission of name push into h1 in game/selectionscreen
@@ -39,28 +41,28 @@ $form.submit(function(event){
 	$('h1').text(yourName);
 	$('#landing').fadeOut('slow');
 	$('h1').fadeIn(3500); 
-//	$('#selectionscreen').fadeIn(4000);
+	$('#selectionscreen').fadeIn(4000);
 	$('#game').fadeIn(4000);
 //	timingScramble();
-//	selectionBoards();
+	selectionBoards();
 });
 
 //these selectionBoard function creates boards for the user to select from an arays in the colors object
 // loops through and names each board according to their object key name. 
 // values are the array of colors for the matrix's 
 function selectionBoards(){
-	for (let i = 0; i < 5; i++){
+	for (c = 0; c < 5; c++){
 		let $selections = $('<div>'); 
 		$selections.addClass('selections');
+		$selections.append(keys[c]);
 		$('#selectionscreen').append($selections);
 		$selections.click(function(){
 			// for each of the ojects assign to one selection board
 			// append image, on click push to the colorMatrix as an argument
 			// **change parameter for color matrix insert it instead of colors.length
-			
-		})
+			colorMatrix(keys[c]);
+		});
 	}
-	
 }
 
 
@@ -68,8 +70,8 @@ function selectionBoards(){
 // this creates a grid based on parameter n.
 // Math.floor(i/colors.length) allows to add color to the board depending on the length of the color array
 // by adding the color to the div's this way it ensure every color in a row be the same color. 
-function colorMatrix(){
-	for(let i = 0; i < colors.length*colors.length; i++){
+function colorMatrix(keys[c]){
+	for(let i = 0; i < keys[c].length; i++){
 		const row = Math.floor(i/colors.length);
 		$matrix = $("<div></div>");
 		$matrix.addClass('matrix ' + row );
